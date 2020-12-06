@@ -52,6 +52,7 @@ print(highestID)
 ids = list(map(getID, input))
 ids.sort()
 
+# find the missing consecutive ID
 for i in range(1, len(ids)):
     id1 = ids[i-1]
     id2 = ids[i]
