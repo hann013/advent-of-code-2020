@@ -11,7 +11,7 @@ def getEveryoneYesAnswers(group):
     # convert answers to sets of letters so we can get the intersection of sets
     answers = list(map(set, answers))
     everyone = answers[0]
-    for i,a in enumerate(answers, start=1):
+    for a in answers[1:]:
         # ignore empty sets
         if not len(a) == 0:
             everyone = everyone.intersection(a)

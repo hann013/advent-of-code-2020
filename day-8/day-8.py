@@ -5,8 +5,7 @@ f = open("day-8-input.txt", "r")
 input = f.readlines()
 
 # Part 1
-i = 0
-acc = 0
+i = acc = 0
 executedLines = []
 
 while True:
@@ -35,13 +34,11 @@ print(acc)
 
 # Part 2
 def getResult(input):
-    i = 0
-    acc = 0
+    i = acc = 0
     executedLines = []
 
     while i < len(input):
-        op = input[i]
-        code, num = op.split(" ")
+        code, num = input[i].split(" ")
         num = int(num)
 
         if code == "nop":
@@ -64,7 +61,7 @@ def getResult(input):
 # Try swapping inputs for each nop/jmp instruction
 for i, line in enumerate(input):
     code, num = line.split(" ")
-    newInput = copy.copy(input)
+    newInput = copy.deepcopy(input)
 
     if code == "nop":
         newInput[i] = "jmp " + num

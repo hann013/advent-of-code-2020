@@ -2,7 +2,7 @@
 
 f = open("day-1-input.txt", "r")
 input = f.read().splitlines()
-nums = list(map(lambda n: int(n), input))
+nums = list(map(int, input))
 nums.sort()
 length = len(nums)
 target = 2020

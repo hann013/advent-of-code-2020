@@ -1,5 +1,4 @@
 ### ***** Advent of Code 2020 - Day 7 ***** ###
-import copy
 
 # Parse each bag's contents into {num: [number of content bags], color: [color of content bag]}
 def parseRule(rule):

@@ -6,16 +6,18 @@ def getID(bp):
     # get row from first 7 letters
     for i in range(7):
         letter = bp[i]
+        start, end = rows
+
         if letter == "F":
             if i == 6:
-                row = rows[0]
+                row = start
             else:
-                rows[1] = (rows[0] + rows[1]) // 2
+                rows[1] = (start + end) // 2
         elif letter == "B":
             if i == 6:
                 row = rows[1]
             else:
-                rows[0] = (rows[0] + rows[1]) // 2 + 1
+                rows[0] = (start + end) // 2 + 1
 
     cols = [0, 7]
     col = 0
@@ -23,16 +25,18 @@ def getID(bp):
     # get column from last 3 letters
     for i in range(7, 10):
         letter = bp[i]
+        start, end = cols
+
         if letter == "L":
             if i == 9:
                 col = cols[0]
             else:
-                cols[1] = (cols[0] + cols[1]) // 2
+                cols[1] = (start + end) // 2
         elif letter == "R":
             if i == 9:
                 col = cols[1]
             else:
-                cols[0] = (cols[0] + cols[1]) // 2 + 1
+                cols[0] = (start + end) // 2 + 1
 
     return row * 8 + col
 
