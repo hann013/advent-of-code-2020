@@ -36,3 +36,5 @@ sum = 0
 for a in answers:
     sum += len(a)
 print(sum)
+
+f.close()

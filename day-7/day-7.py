@@ -59,3 +59,5 @@ for bag in bags:
     count[0] = count[0] + n
     countNumShinyGoldBags(rules, count, bag, n)
 print(count[0])
+
+f.close()

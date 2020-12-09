@@ -69,3 +69,5 @@ for i, line in enumerate(input):
     elif code == "jmp":
         newInput[i] = "nop " + num
         getResult(newInput)
+
+f.close()

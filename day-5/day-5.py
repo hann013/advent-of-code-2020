@@ -62,3 +62,5 @@ for i in range(1, len(ids)):
     id2 = ids[i]
     if id2 - id1 > 1:
         print(id1+1)
+
+f.close()

@@ -48,3 +48,5 @@ product = numTreesEveryOtherRow
 for data in numTrees:
     product *= data[2]
 print(product)
+
+f.close()

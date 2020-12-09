@@ -101,3 +101,5 @@ passports = input.split("\n\n")
 fields = list(map(getPassportFields, passports))
 print(getNumValidPassportsOne(fields))
 print(getNumValidPassportsTwo(fields))
+
+f.close()

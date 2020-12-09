@@ -39,3 +39,5 @@ for line in input:
         numValidTwo += 1
 
 print(numValidOne, numValidTwo)
+
+f.close()
