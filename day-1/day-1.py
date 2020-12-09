@@ -18,8 +18,12 @@ while i1 < length and i2 < length:
     if sum == target: # found the solution
         print(num1 * num2)
         break
-    elif sum < target: # sum too small, so increment higher num
-        i2 += 1
+    elif sum < target: # sum too small, so increment higher num unless it's at max
+        if i2 == length - 1:
+            i1 += 1
+            i2 = i1+1
+        else:
+            i2 += 1
     elif sum > target: # sum too large, so increment lower num and reset higher num
         i1 += 1
         i2 = i1+1
