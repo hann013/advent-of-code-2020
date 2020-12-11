@@ -59,3 +59,5 @@ for a in input:
     numAdapters[a] = getAdapters(numAdapters, input, a)
 
 print(getAdapters(numAdapters, input, max))
+
+f.close()
