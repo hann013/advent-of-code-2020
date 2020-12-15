@@ -10,6 +10,7 @@ def convertToBin(val):
         val = "0" + val
     return list(val)
 
+# convert binary value back to decimal
 def convertToDec(val):
     result = 0
     base = 1
@@ -19,9 +20,7 @@ def convertToDec(val):
         base *= 2
     return result
 
-def storeValues(addr, val):
-    storeAllPossible(addr, 0, val)
-
+# store the values at all possible values of the address, when considering floating values
 def storeAllPossible(addr, curIndex, val):
     # reached the end, so store val in address
     if curIndex == len(addr):
@@ -37,6 +36,7 @@ def storeAllPossible(addr, curIndex, val):
                 storeAllPossible(c, i+1, val)
                 break
             elif i == len(addr) - 1:
+                # reached the end, so store val in address
                 a = convertToDec("".join(addr))
                 addresses[a] = val
 
@@ -63,7 +63,8 @@ for line in input:
         for i,l in enumerate(curMask):
             if l == "1" or l == "X":
                 addr[i] = l
-        storeValues(addr, int(line[1]))
+
+        storeAllPossible(addr, 0, int(line[1]))
 
 print(sum(addresses.values()))
 
