@@ -45,3 +45,5 @@ for i in input:
         addresses[addr] = convertToDec("".join(val))
 
 print(sum(addresses.values()))
+
+f.close()

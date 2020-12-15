@@ -66,3 +66,5 @@ for line in input:
         storeValues(addr, int(line[1]))
 
 print(sum(addresses.values()))
+
+f.close()
