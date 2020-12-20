@@ -1,4 +1,4 @@
-### ***** Advent of Code 2020 - Day 18 Part 1 ***** ###
+### ***** Advent of Code 2020 - Day 18 Part 2 ***** ###
 
 f = open("day-18-input.txt", "r")
 input = f.readlines()
